@@ -2,7 +2,7 @@ let user={};
 let option;
 user.name=prompt("Enter the User Name");
 let dobstring=prompt("Enter the Date of Birth in this format YYYY/MM/DD");
-user.dob=calculate_age(dobstring,null);
+user.dob=calculate_year(dobstring,null);
 do{
 user.email=prompt("Enter the email address");
 if(user.email.includes("@")){
@@ -32,7 +32,7 @@ do{
     let designation=prompt("Enter the Desgination");
     let jod=prompt("Enter the Joining Date in this format YYYY/MM/DD");
     let lod=prompt("Enter the Leaving Date in this format YYYY/MM/DD");
-    let experienceYear=calculate_age(jod,lod);
+    let experienceYear=calculate_year(jod,lod);
     user.experience.push({company,designation,jod,lod,experienceYear});
 
     option=prompt("Do you want to add the new Experience If Yes press Y || y Else No press N || n")
@@ -42,7 +42,7 @@ console.log(user);
 //console.log(user.name);
 
 // funtion Year Convert 
-function calculate_age(setStrDate,newStrDate){
+function calculate_year(setStrDate,newStrDate){
    let strDate;
    let newDate;
     strDate=new Date(setStrDate);
